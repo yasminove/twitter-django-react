@@ -1,0 +1,9 @@
+{% extends "library/base.html" %}
+{% block content %}
+    {% for post in posts %}
+    <h3>title {{post.title}}</h3>
+    <h4>By {{post.author}}</h4>
+    <h2>Yasmin is genius</h2>
+    {% endfor %}
+
+ {% endblock content %}   
