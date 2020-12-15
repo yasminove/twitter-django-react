@@ -2,5 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse('<h2>School Page</h2>')
+    return render(request, 'school/home.html')
+
+def about(request):
+    return render(request, 'school/about.html')
 
