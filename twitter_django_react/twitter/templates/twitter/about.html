@@ -1,0 +1,9 @@
+{% extends "twitter/base.html"%}
+
+{% block content %}
+    <h4>hi from temp</h4>
+    {% for post in posts %}
+    <h2>{{post.title}}</h2>
+    {% endfor %}
+
+{% endblock %}   
