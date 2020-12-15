@@ -1,9 +1,33 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
+
+posts = [
+    {
+        'author': "Yasmin Hillis", 
+        'title': "Blog post 1", 
+        'content': 'blog post content', 
+        'date_posted': '23 Dec, 2020'
+    }, 
+    {
+        'author': "Yazan Hillis", 
+        'title': "Blog post 2", 
+        'content': 'blog post content 2', 
+        'date_posted': '25 Dec, 2020'
+    },
+    {
+        'author': "Yazan Hillis", 
+        'title': "Blog post 3", 
+        'content': 'blog post content 3', 
+        'date_posted': '25 Dec, 2020'
+    }
+]
 
 def Home(request):
-    return HttpResponse('<h1>Twitter Home</h1>')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'twitter/home.html', context)
 
 def about(request):
-    return HttpResponse('<h2>Twitter About</h2>')    
+    
+    return render(request, 'twitter/about.html', {'title': 'ABOUT'})
