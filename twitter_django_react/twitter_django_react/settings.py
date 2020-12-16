@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'clinic.apps.ClinicConfig',
     'library.apps.LibraryConfig',
     'twitter.apps.TwitterConfig',
     'school.apps.SchoolConfig',
